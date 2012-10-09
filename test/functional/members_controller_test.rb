@@ -17,7 +17,7 @@ class MembersControllerTest < AllocationControllerTestCase
 
     membership = Member.first
     assert_equal 1, Member.count
-    assert_equal 100, membership.allocation
+    assert_equal 0, membership.allocation
     assert_nil membership.from_date
     assert_nil membership.to_date
   end
@@ -28,7 +28,7 @@ class MembersControllerTest < AllocationControllerTestCase
 
     assert_equal 1, Member.count
     assert_equal [Role.find_by_name("Manager")], membership.roles
-    assert_equal 100, membership.allocation
+    assert_equal 0, membership.allocation
     assert_nil membership.from_date
     assert_nil membership.to_date
 

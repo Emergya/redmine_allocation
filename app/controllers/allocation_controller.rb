@@ -19,7 +19,7 @@ class AllocationController < ApplicationController
                                         :joins => { :members => :project },
                                         :include => :members,
                                         :conditions => @project.project_condition(true)
-    if user_group_field and project_group_field
+    if user_group_field.present? and project_group_field.present?
       group = @project.custom_value_for(project_group_field)
       quoted_group = CustomValue.connection.quote group
       group_users = User.active.find :all,

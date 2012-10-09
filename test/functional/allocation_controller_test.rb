@@ -25,7 +25,7 @@ class AllocationControllerTest < AllocationControllerTestCase
 
     assert_select "tbody tr", :count => 1
     assert_select "tbody tr td:nth-child(1)", :text => User.find_by_login("admin").to_s
-    assert_select "tbody tr td:nth-child(2)", :text => "100 %"
+    assert_select "tbody tr td:nth-child(2)", :text => "0 %"
     assert_select "tbody tr td:nth-child(3)", :text => "01/01/2012"
     assert_select "tbody tr td:nth-child(4)", :text => "06/01/2012"
   end

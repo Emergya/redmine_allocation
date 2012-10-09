@@ -26,7 +26,7 @@ to projects.
 
 * Does the plugin control that no user is ever allocated at more than 100%?
 
-  No, not yeat, at least. By now this is up to you. Patches welcome.
+  No, not yet, at least. By now this is up to you. Patches welcome.
 
 * What if I don't set an assignment or unassignment date?
 
@@ -53,5 +53,5 @@ version. See LICENSE.txt for details.
 == Contributing
 
 Just fork the repository[https://github.com/Emergya/redmine_allocation] and
-do a pull request. If you are going to do major change that you would like to
-see accepted upstream you can contact me at jmprieto@emergya.com before.
+do a pull request. If you are going to do a major change that you would like
+to see accepted upstream you can contact me at jmprieto@emergya.com before.

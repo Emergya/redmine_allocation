@@ -1,7 +1,7 @@
 class AddPercentAndDatesToMembers < ActiveRecord::Migration
   def self.up
     change_table :members do |t|
-      t.integer :allocation, :null => false, :default => 100
+      t.integer :allocation, :null => false, :default => 0
       t.date :from_date
       t.date :to_date
     end

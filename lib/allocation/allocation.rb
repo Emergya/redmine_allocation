@@ -38,11 +38,11 @@ module Allocation
           days = range_days
         else
           # member.from_date <= from, member.to_date < to
-          days = 1 + (member.to_date - from).to_i
+          days = [0, 1 + (member.to_date - from).to_i].max
         end
-      elsif member.to_date.nil?
+      elsif member.to_date.nil? || member.to_date >= to
         # member.from_date > from, member.to_date >= to
-        days = 1 + (to - member.from_date).to_i
+        days = [0, 1 + (to - member.from_date).to_i].max
       else
         # member.from_date > from, member.to_date < to
         days = 1 + (member.to_date - member.from_date).to_i
