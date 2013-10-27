@@ -1,4 +1,3 @@
-require 'dispatcher'
 require_dependency 'members_controller'
 
 module Allocation
@@ -29,6 +28,7 @@ module Allocation
   end
 end
 
-Dispatcher.to_prepare do
+
+ActionDispatch::Callbacks.to_prepare do 
   MembersController.send(:include, Allocation::Patches::MembersControllerPatch)
 end
