@@ -4,7 +4,7 @@
 
   <h3><%= link_to_project project %></h3>
 
-  <table class="list">
+  <table class="list" style="text-align:center">
     <thead>
       <tr>
         <th><%=l :"allocation.label_person" %></th>
@@ -21,7 +21,7 @@
       <%- else -%>
         <%- project.members.each do |member| -%>
           <tr class="<%= cycle("odd", "even") %>">
-            <td><%= member.user %></td>
+            <td><%=h member.user %></td>
             <td><%= member.allocation ? "#{member.allocation} %" : "--" %></td>
             <td><%= format_date(member.from_date) %></td>
             <td><%= format_date(member.to_date) %></td>
@@ -36,4 +36,4 @@
   <%= render :partial => 'hooks/allocation/view_projects_show_sidebar_bottom' %>
 <% end %>
 
-<% html_title "#{@project}: #{l :'allocation.by_project'}" %>
+<% html_title "#{h @project}: #{l :'allocation.by_project'}" %>
