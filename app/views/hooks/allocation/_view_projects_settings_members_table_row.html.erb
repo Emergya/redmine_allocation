@@ -29,7 +29,7 @@
                :url => url,
                :remote => true,
                :method => method do |f| %>
-    <%= f.text_field :from_date, 
+    <%= f.date_field :from_date, 
                      :size => 10, 
                      :id => "member-#{member.id}-from_date", 
                      :value => member[:from_date], 
@@ -44,7 +44,7 @@
                :url => url,
                :remote => true,
                :method => method do |f| %>
-    <%= f.text_field :to_date, 
+    <%= f.date_field :to_date, 
                      :size => 10, 
                      :id => "member-#{member.id}-to_date", 
                      :value => member[:to_date], 
